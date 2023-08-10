@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Website</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+
+</head>
+
+<body>
+  <header  id="home">
+    <nav>
+      <div class="left">Samrudhi's Portfolio</div>
+      <div class="right">
+        <ul>
+          <li><a href="#home">HOME</a></li>
+          <li><a href="#about">ABOUT</a></li>
+          <li><a href="#">PROJECTS</a></li>
+          <li><a href="#contact">CONTACT</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+
+  <main>
+    <section class="firstsection">
+      <div class="leftsection">
+        Hi, My name is <span class="name"><br>Samrudhi Naik</span>
+        <div>and I'm a Web Developer.</div>
+      </div>
+      <div class="rightsection">
+        <img src="webdev.png" alt="">
+      </div>
+    </section>
+  </main>
+
+
+  <section>
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about-col1">
+            <img src="photo.jpg" alt="">
+          </div>
+          <div class="about-col2">
+            <h1 class="sub-title">About Me</h1>
+            <p>Enthusiastic and motivated undergraduate software
+              engineering student seeking an opportunity at your
+              company. I possess an exceptional ability to work and learn
+              simultaneously and strive to gain knowledge and expertise in
+              operating your systems.</p>
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+              <p class="tab-links" onclick="opentab('experience')">Experience</p>
+              <p class="tab-links" onclick="opentab('education')">Education</p>
+            </div>
+            <div class="tab-contents active-tab" id="skills">
+              <ul>
+                <li>HTML5</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Basics of C/C++</li>
+                <li>Java</li>
+                <li>Python</li>
+                <li>SQL</li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="experience">
+              <ul>
+                <li><span class="sub">Edunet Foundation (AICTE)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Jun 2023 - Jul
+                    2023</span><br>IBM SkillsBuild Internship for Front End Development
+                </li>
+                <li><span class="sub">Persistent Systems Limited&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Aug 2023 -
+                    Present</span><br>Martian Summer Internship 2023
+                </li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="education">
+              <ul>
+                <li>Shree Rayeshwar Institute Of Engineering And
+                  Information Technology<br>
+                  <span>Bachelor of Computer Engineering<br></span>
+                  <span class="sub">SEM I - V : 8.56 CGPA &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2020 - 2024
+                  </span>
+                </li>
+                <li>Deepvihar Higher Secondary School<br>
+                  <span class="sub">HSSC : 71.33
+                    %&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2019
+                    - 2020</span>
+                </li>
+                <li>Deepvihar High School<br>
+                  <span class="sub">SSC : 85.16 %
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2017
+                    - 2018</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section>
+    <fieldset>
+      <div id="contact">
+        <div class="container">
+          <div class="row">
+            <div class="contact-left">
+              <h1 class="sub-title">Contact Me</h1>
+              <p><i class="fa-solid fa-envelope" id="mail"></i>samrudhinaik2305@gmail.com</p>
+              <p> <i class="fa-solid fa-square-phone"></i>+91 9552452625</p>
+              <div class="social-icons">
+                <a href="https://www.instagram.com/samrudhi23_/"> <i class="fa-brands fa-instagram"></i> </a>
+                <a href="https://www.linkedin.com/in/samrudhi-naik-b29494204/"> <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/Samrudhi23"> <i class="fa-brands fa-github"></i> </a>
+              </div>
+              <a href="Samrudhi's Resume (2).pdf" download class="btn btn2">Download CV</a>
+            </div>
+
+            <div class="contact-right">
+              <form class="form-center" name="submit-to-google-sheet">
+                <input type="text" name="Name" placeholder="Your Name" required>
+                <input type="email" name="Email" placeholder="Your Email" required>
+                <textarea name="Message" rows="6" placeholder="Your Message"></textarea><br>
+                <button type="submit" class="btn btn2">Submit</button>
+              </form>
+              <span id="msg"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </fieldset>
+  </section>
+
+<section>
+  <footer>
+    <p> Copyright &copy; Samrudhi.</p>
+  </footer>
+</section>
+  
+  <script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname) {
+      for (tablink of tablinks) {
+        tablink.classList.remove("active-link");
+      }
+      for (tabcontent of tabcontents) {
+        tabcontent.classList.remove("active-tab");
+      }
+
+      event.currentTarget.classList.add("active-link");
+      document.getElementById(tabname).classList.add("active-tab");
+    }
+  </script>
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbynVuKvj50j6qteGXHcVy08OXzKYq8vQNTkdejchqKwEO7xE2yjNsdqWFw49lU9TwPKig/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+          msg.innerHTML="Message sent successfully"
+          setTimeout(function(){
+            msg.innerHTML=""
+          }, 5000)
+          form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+</body>
+
+</html>
